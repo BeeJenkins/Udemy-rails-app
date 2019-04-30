@@ -1,0 +1,2 @@
+class TemplateOne < ApplicationRecord
+end
