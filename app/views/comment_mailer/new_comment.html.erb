@@ -1,0 +1,7 @@
+<h1>Hello, new comment posted on post <%= @post.title %></h1>
+
+<p>
+  <%= @comment.body %>
+</p>
+
+<p> <%= link_to "to send a reply click here", post_url(@post) %></p>
