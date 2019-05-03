@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b46e1bdf-b95b-4153-a6c9-518e51708ce5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/sidekiq.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Udemy-rails.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Udemy-rails.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -54,20 +55,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="645">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+        <entry file="file://$PROJECT_DIR$/config/sidekiq.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+            <state relative-caret-position="75">
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/workers/back_worker.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1035">
+              <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -113,8 +150,10 @@
         <option value="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/sidekiq.rb" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
   </component>
@@ -129,6 +168,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,14 +185,24 @@
             <path>
               <item name="Udemy-rails" type="b2602c69:ProjectViewProjectNode" />
               <item name="Udemy-rails" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="workers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Udemy-rails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Udemy-rails" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Udemy-rails" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Udemy-rails" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="environments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,18 +363,18 @@
       <option name="presentableId" value="Default" />
       <updated>1556609329565</updated>
       <workItem from="1556609331429" duration="19382000" />
-      <workItem from="1556798378325" duration="7613000" />
+      <workItem from="1556798378325" duration="9461000" />
+      <workItem from="1556895918465" duration="689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26995000" />
+    <option name="totallyTimeSpent" value="29532000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="945" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1853" height="889" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25235197" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.255119" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -335,8 +386,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33754742" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32996207" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33741498" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -527,13 +578,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/posts/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -597,24 +641,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="382">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        <state relative-caret-position="645">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/config/sidekiq.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/workers/back_worker.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
