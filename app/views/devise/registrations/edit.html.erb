@@ -8,7 +8,14 @@
     <%= f.input :first_name, required: true, label:  "first name" %>
     <%= f.input :last_name, required: true,label:  "last name" %>
     <%= f.input :username, required: true, label: "username" %>
+    <label>Upload a photo</label>
+    <%= f.input :image, as: :file, label:false %>
 
+<!--    <%# if @user.image.present? %>
+      <%#= image_tag @user.image_url(:thumb), class: 'rounded-circle' %>
+    <%# else %>
+      <%#= image_tag 'no image', class: 'rounded-circle' %>
+    <%# end %>-->
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

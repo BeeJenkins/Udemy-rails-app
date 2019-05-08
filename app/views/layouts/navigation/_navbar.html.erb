@@ -13,9 +13,11 @@
       <li class="nav-item">
         <%= link_to "Posts", posts_path, class: "nav-link"  %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
+      <% if current_user.try(:admin) == true %>
+        <li class="nav-item">
+          <%= link_to "Templates", new_template_one_path, class: "nav-link"  %>
+        </li>
+      <% end %>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
       </li>

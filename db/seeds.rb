@@ -10,7 +10,8 @@ user2 = User.create(
     email: 'barbarajenkins_edale@hotmail.com', password: 'password', password_confirmation: 'password',
     first_name: 'B2',
     last_name: 'Jenkins',
-    username: 'Bee2'
+    username: 'Bee2',
+    admin: true
 )
 
 50.times do

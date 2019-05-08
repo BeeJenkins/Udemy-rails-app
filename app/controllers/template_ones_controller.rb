@@ -1,5 +1,6 @@
 class TemplateOnesController < ApplicationController
   before_action :set_template_one, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user
 
   # GET /template_ones
   # GET /template_ones.json
@@ -10,6 +11,9 @@ class TemplateOnesController < ApplicationController
   # GET /template_ones/1
   # GET /template_ones/1.json
   def show
+    if current_user
+      redirect_to_posts_path
+    end
   end
 
   # GET /template_ones/new
@@ -63,6 +67,13 @@ class TemplateOnesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+   def admin_user
+      if !current_user.try(:admin) == true
+        flash[:danger] = "The resource does not exist"
+       redirect_to root_path
+     end
+   end
+
     def set_template_one
       @template_one = TemplateOne.find(params[:id])
     end
