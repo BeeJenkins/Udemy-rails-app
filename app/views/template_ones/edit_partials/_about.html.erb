@@ -1,18 +1,15 @@
+<div class = 'container'>
 
 <%= simple_form_for(@template_one) do |f| %>
-
-
-
   <div class="form-inputs">
     <%= f.input :about_title, label:false %>
     <%= f.input :about_text, label:false %>
-    <label>Add custom image</label>
     <%= f.input :about_image, label:false, as: :file %>
     <%= f.input :about_show, label:false %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit , data: {disable_with: 'doing something...'}%>
-    <%= link_to "Home", root_path, class: "btn btn-outline-success btn-sm pull-right"%>
+    <%= f.button :submit %>
   </div>
 <% end %>
+</div>

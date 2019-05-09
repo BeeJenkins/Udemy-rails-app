@@ -28,4 +28,10 @@ comment = Comment.create(
                      post_id: rand(1..50),
                      user_id: rand(1..2)
 )
-  end
+end
+
+t1 = TemplateOne.create!(
+                    about_text: 'my web page',
+                    about_title: 'First',
+                    about_image: ''
+)

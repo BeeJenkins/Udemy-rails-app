@@ -29,7 +29,10 @@ ActiveRecord::Schema.define(version: 2019_05_08_075356) do
   end
 
   create_table "template_ones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "string_input_1"
+    t.boolean "about_show", default: true
+    t.string "about_title"
+    t.string "about_text"
+    t.string "about_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

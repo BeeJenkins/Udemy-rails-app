@@ -1,18 +1,22 @@
 class TemplateOnesController < ApplicationController
-  before_action :set_template_one, only: [:show, :edit, :update, :destroy]
-  before_action :admin_user
+  before_action :set_template_one, only: [:show, :edit, :update, :destroy, :edit_about]
+  before_action :authenticate_user!, except: [:show]
+  before_action :not_admin_user, only: [ :edit, :update, :destroy]
 
   # GET /template_ones
   # GET /template_ones.json
   def index
     @template_ones = TemplateOne.all
+    if current_user and !current_user.try(:admin?)
+      redirect_to posts_path
+    end
   end
 
   # GET /template_ones/1
   # GET /template_ones/1.json
   def show
-    if current_user
-      redirect_to_posts_path
+    if current_user and !current_user.try(:admin?)
+      redirect_to posts_path
     end
   end
 
@@ -23,6 +27,7 @@ class TemplateOnesController < ApplicationController
 
   # GET /template_ones/1/edit
   def edit
+
   end
 
   # POST /template_ones
@@ -65,9 +70,13 @@ class TemplateOnesController < ApplicationController
     end
   end
 
+  def edit_about
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
-   def admin_user
+   def not_admin_user
       if !current_user.try(:admin) == true
         flash[:danger] = "The resource does not exist"
        redirect_to root_path
@@ -75,11 +84,16 @@ class TemplateOnesController < ApplicationController
    end
 
     def set_template_one
-      @template_one = TemplateOne.find(params[:id])
+      @template_one = TemplateOne.find(1)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def template_one_params
-      params.require(:template_one).permit(:string_input_1)
+      params.require(:template_one).permit(
+          :about_show,
+          :about_title,
+          :about_text,
+          :about_image,
+      )
     end
 end
