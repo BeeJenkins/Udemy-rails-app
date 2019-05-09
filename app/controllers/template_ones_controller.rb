@@ -51,7 +51,7 @@ class TemplateOnesController < ApplicationController
   def update
     respond_to do |format|
       if @template_one.update(template_one_params)
-        format.html { redirect_to @template_one, notice: 'Template one was successfully updated.' }
+        format.html { redirect_back fallback_location: root_path, notice: 'Template one was successfully updated.' }
         format.json { render :show, status: :ok, location: @template_one }
       else
         format.html { render :edit }

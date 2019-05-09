@@ -3,10 +3,13 @@
 <p>
   <strong>This is my web page:</strong>
   <%= @template_one.about_title %>
-  <%= @template_one.about_text %>
-  <%= image_tag @template_one.about_image_url() %>
+  <% if @template_one.about_show == true %>
+    <%= @template_one.about_text %>
+    <%= image_tag @template_one.about_image_url() %>
+    <% end %>
 </p>
 
 
-<%= link_to 'Edit', edit_template_one_path(@template_one) %> |
+
+<%= link_to 'Edit', edit_template_one_path(@template_one) if current_user.try(:admin?) %> |
 <%= link_to 'Back', template_ones_path %>
