@@ -9,8 +9,9 @@
   <strong>Body:</strong>
   <%= @post.body %>
 </p>
+<hr>
 <p> Comments </p>
-<%= render @post.comments %>
+<%= render @post.comments.order(created_at: :desc) %>
 <p>
   <strong>Add Comment:</strong>
   <%= render 'comments/form' %>
