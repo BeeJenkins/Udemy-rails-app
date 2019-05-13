@@ -1,0 +1,2 @@
+class IncomingContact < ApplicationRecord
+end
