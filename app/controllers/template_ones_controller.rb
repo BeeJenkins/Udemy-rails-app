@@ -7,17 +7,12 @@ class TemplateOnesController < ApplicationController
   # GET /template_ones.json
   def index
     @template_ones = TemplateOne.all
-    if current_user and !current_user.try(:admin?)
-      redirect_to posts_path
-    end
   end
 
   # GET /template_ones/1
   # GET /template_ones/1.json
   def show
-    if current_user and !current_user.try(:admin?)
-      redirect_to posts_path
-    end
+
   end
 
   # GET /template_ones/new
@@ -94,6 +89,7 @@ class TemplateOnesController < ApplicationController
           :about_title,
           :about_text,
           :about_image,
+          :front_end_colour
       )
     end
 end

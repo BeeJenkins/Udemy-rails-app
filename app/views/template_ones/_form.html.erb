@@ -9,7 +9,7 @@
     <%= f.input :about_text, label:false %>
     <label>Add custom image</label>
     <%= f.input :about_image, label:false, as: :file %>
-
+<%= f.input :front_end_colour, collection: TemplateOne::FRONT_END_COLOUR, label:"web page colour scheme" %>
   </div>
 
   <div class="form-actions">

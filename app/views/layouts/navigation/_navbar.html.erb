@@ -16,11 +16,9 @@
       <li class="nav-item">
         <%= link_to "Contact", new_contact_path, class: "nav-link"  %>
       </li>
-      <% if current_user.try(:admin) == true %>
         <li class="nav-item">
           <%= link_to "Templates", template_ones_path, class: "nav-link"  %>
         </li>
-      <% end %>
 <!--      <li class="nav-item">-->
         <%#= link_to "Pages", edit_about_path, class: "nav-link"  %>
 <!--      </li>-->

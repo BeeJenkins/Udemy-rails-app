@@ -15,13 +15,16 @@
       <tr>
         <td><%= template_one.about_title %></td>
         <td><%= link_to 'Show', template_one %></td>
-        <td><%= link_to 'Edit', edit_template_one_path(template_one) %></td>
-        <td><%= link_to 'Destroy', template_one, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.try(:admin) == true %>
+          <td><%= link_to 'Edit', edit_template_one_path(template_one) %></td>
+          <td><%= link_to 'Destroy', template_one, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Template One', new_template_one_path %>
+<% if current_user.try(:admin) == true %>
+  <%= link_to 'New Template One', new_template_one_path %>
+<% end %>
