@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :contacts
+  resources :contacts, only: [:create, :new, :destroy]
   resources :posts
   devise_for :users, controllers:{ registrations:'user_registrations/registrations'}
   resources :template_ones
