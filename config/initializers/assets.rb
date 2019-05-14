@@ -13,4 +13,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile += %w(themes/w3.css)
 Rails.application.config.assets.precompile += %w(themes/bootstrap.css )
+Rails.application.config.assets.precompile += %w(template_ones_web_page.js)
 
